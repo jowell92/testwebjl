@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="scformulario.js"></script>
+    <title>formulario m09</title>
+</head>
+
+<body>
+    <section>
+        <form>
+            <h2>DATOS FORMULARIO</h2>
+            <div>
+                <label>NOMBRE</label>
+                <input type="text" id="name" placeholder="3-15 LETRAS" pattern="[a-z]{3,15}" title="Nombre Incorrecto"
+                    oninput="nombre()" required />
+
+                <label>DNI</label>
+                <input type="text" id="dni" placeholder="8 NUMEROS 1 LETRA" pattern="[0-9]{8}[A-Z]{1}"
+                    title="DNI Incorrecto" oninput="dniok()" required />
+
+                <label>TELEFONO</label>
+                <input type="text" id="phone" placeholder="9 CIFRAS" pattern="[0-9]{9}" title="Telefono Incorrecto"
+                    oninput="telefono()" required />
+
+                <label>CORREO ELECTRONICO</label>
+                <input type="email" id="email" placeholder="CORREO VALIDO" required />
+
+                <label>FECHA ENTRADA</label>
+                <input type="date" id="datestart" placeholder="date" required />
+
+                <label>FECHA SALIDA</label>
+                <input type="date" id="dateend" placeholder="date" oninput="fecha()" required />
+
+                <label>PERSONAS</label>
+                <input type="text" id="check1" placeholder="ADULTOS MAX 9" pattern="[0-9]{1}" oninput="adultos()"
+                    required />
+                <input type="text" id="check2" placeholder="NIÑOS MAX 9" pattern="[0-9]{1}" oninput="niños()"
+                    required />
+
+                <input type="submit" id="submit" value="ENVIAR" onclick="valido()" />
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
